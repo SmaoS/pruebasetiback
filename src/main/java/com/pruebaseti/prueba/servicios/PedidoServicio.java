@@ -17,15 +17,10 @@ public class PedidoServicio {
 	@Autowired
 	private PedidoConversor conversor;
 	
-	public PedidoRespuestaDTO pedido(PedidoDTO dto) {
-	
-//		try {
+	public PedidoRespuestaDTO pedido(PedidoDTO dto) {	
+
 			return conversor.xmlADTO(cliente.pedidoCliente(conversor.dtoAXML(dto)));
-//		} catch (JAXBException e) {			
-//			e.printStackTrace();
-//			return null;
-//		}
-		
+
 	}
 	
 }
